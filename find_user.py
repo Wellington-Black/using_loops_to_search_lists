@@ -9,7 +9,8 @@ users = [
 def find_user(list, user_id):
     for user in users:
         if user["user_id"] == user_id:
-            return user["first_name"]
+            return user["first_name"] + " " + user["last_name"]
+           
 
     return "I don't know that person"
 
