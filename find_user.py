@@ -6,13 +6,20 @@ users = [
   { "user_id": 5, "first_name": "Brendan", "last_name": "Eich" },
 ]
 
-def find_user(list, user_id):
-    for user in users:
-        if user["user_id"] == user_id:
-            return user["first_name"] + " " + user["last_name"]
+# def find_user(list, user_id):
+#     for user in users:
+#         if user["user_id"] == user_id:
+#             return user["first_name"] + " " + user["last_name"]
            
 
-    return "I don't know that person"
+#     return "I don't know that person"
+
+def find_user(list, user_id):
+    found_user = None
+    for user in users:
+        if user["user_id"] == user_id:
+          found_user = user
+          return user["first_name"] + " " + user["last_name"]
 
 
 print(find_user(users, 4))
